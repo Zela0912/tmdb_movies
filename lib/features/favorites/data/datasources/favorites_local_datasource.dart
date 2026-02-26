@@ -20,13 +20,14 @@ class FavoritesLocalDatasourceImpl implements FavoritesLocalDatasource {
   late final Box _box;
 
   List<Movie> _getMoviesFromBox() {
-  final data = _box.get(AppConstants.favoritesKey);
-  if (data == null) return [];
-  final List<dynamic> jsonList = json.decode(data as String);
-  return jsonList
-      .map<Movie>((e) => MovieModel.fromJson(e as Map<String, dynamic>))
-      .toList();
-}
+    final data = _box.get(AppConstants.favoritesKey);
+    if (data == null) return [];
+    final List<dynamic> jsonList = json.decode(data as String);
+    return jsonList
+        .map<Movie>((e) => MovieModel.fromJson(e as Map<String, dynamic>))
+        .toList();
+  }
+
   Future<void> _saveMoviesToBox(List<Movie> movies) async {
     final jsonList = movies.map((m) {
       return {

@@ -11,8 +11,18 @@ class DateFormatter {
     final parts = date.split('-');
     if (parts.length < 3) return 'N/A';
     final months = [
-      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
     ];
     final month = int.tryParse(parts[1]);
     if (month == null || month < 1 || month > 12) return 'N/A';

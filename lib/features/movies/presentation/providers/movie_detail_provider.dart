@@ -9,7 +9,8 @@ final getMovieDetailUseCaseProvider = Provider<GetMovieDetailUseCase>((ref) {
   );
 });
 
-final movieDetailProvider = FutureProvider.family<MovieDetail, int>((ref, id) async {
+final movieDetailProvider =
+    FutureProvider.family<MovieDetail, int>((ref, id) async {
   final useCase = ref.watch(getMovieDetailUseCaseProvider);
   final result = await useCase(id);
 

@@ -16,7 +16,8 @@ final movieRepositoryProvider = Provider<MovieRepositoryImpl>((ref) {
   );
 });
 
-final getPopularMoviesUseCaseProvider = Provider<GetPopularMoviesUseCase>((ref) {
+final getPopularMoviesUseCaseProvider =
+    Provider<GetPopularMoviesUseCase>((ref) {
   return GetPopularMoviesUseCase(
     repository: ref.watch(movieRepositoryProvider),
   );
@@ -119,6 +120,7 @@ class MoviesNotifier extends StateNotifier<MoviesState> {
   }
 }
 
-final moviesProvider = StateNotifierProvider<MoviesNotifier, MoviesState>((ref) {
+final moviesProvider =
+    StateNotifierProvider<MoviesNotifier, MoviesState>((ref) {
   return MoviesNotifier(ref.watch(getPopularMoviesUseCaseProvider));
 });

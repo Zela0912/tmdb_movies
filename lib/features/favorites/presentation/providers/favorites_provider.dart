@@ -8,7 +8,8 @@ import 'package:tmdb_movies/features/favorites/domain/usecases/remove_favorite_u
 import 'package:tmdb_movies/features/movies/domain/entities/movie.dart';
 import 'package:tmdb_movies/features/movies/domain/entities/movie_detail.dart';
 
-final favoritesLocalDatasourceProvider = Provider<FavoritesLocalDatasource>((ref) {
+final favoritesLocalDatasourceProvider =
+    Provider<FavoritesLocalDatasource>((ref) {
   return FavoritesLocalDatasourceImpl();
 });
 
@@ -19,7 +20,8 @@ final favoritesRepositoryProvider = Provider<FavoritesRepositoryImpl>((ref) {
 });
 
 final getFavoritesUseCaseProvider = Provider<GetFavoritesUseCase>((ref) {
-  return GetFavoritesUseCase(repository: ref.watch(favoritesRepositoryProvider));
+  return GetFavoritesUseCase(
+      repository: ref.watch(favoritesRepositoryProvider));
 });
 
 final addFavoriteUseCaseProvider = Provider<AddFavoriteUseCase>((ref) {
@@ -27,7 +29,8 @@ final addFavoriteUseCaseProvider = Provider<AddFavoriteUseCase>((ref) {
 });
 
 final removeFavoriteUseCaseProvider = Provider<RemoveFavoriteUseCase>((ref) {
-  return RemoveFavoriteUseCase(repository: ref.watch(favoritesRepositoryProvider));
+  return RemoveFavoriteUseCase(
+      repository: ref.watch(favoritesRepositoryProvider));
 });
 
 class FavoritesState {
@@ -105,7 +108,8 @@ class FavoritesNotifier extends StateNotifier<FavoritesState> {
   }
 }
 
-final favoritesProvider = StateNotifierProvider<FavoritesNotifier, FavoritesState>((ref) {
+final favoritesProvider =
+    StateNotifierProvider<FavoritesNotifier, FavoritesState>((ref) {
   return FavoritesNotifier(
     ref.watch(getFavoritesUseCaseProvider),
     ref.watch(addFavoriteUseCaseProvider),
