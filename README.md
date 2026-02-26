@@ -29,7 +29,7 @@ A Flutter application for browsing popular movies using The Movie Database (TMDb
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/tmdb_movies.git
+git clone https://github.com/Zela0912/tmdb_movies.git
 cd tmdb_movies
 ```
 
