@@ -1,10 +1,10 @@
-# 🎬 TMDB Movies
+TMDB Movies
 
 A Flutter application for browsing popular movies using The Movie Database (TMDb) API.
 
 ---
 
-## 📱 Features
+Features
 
 - Browse popular movies with infinite scroll pagination
 - View detailed movie information (overview, genres, rating, runtime)
@@ -18,7 +18,7 @@ A Flutter application for browsing popular movies using The Movie Database (TMDb
 
 ---
 
-## 🚀 Getting Started
+Getting Started
 
 ### Prerequisites
 
@@ -52,7 +52,7 @@ flutter run
 
 ---
 
-## 📦 Packages Used
+Packages Used
 
 | Package | Version | Purpose |
 |---|---|---|
@@ -68,7 +68,7 @@ flutter run
 
 ---
 
-## 🏗️ Architecture
+Architecture
 
 The project follows **Clean Architecture** with a **Feature-first** folder structure.
 ```
@@ -103,7 +103,7 @@ Each feature is divided into three layers:
 
 ---
 
-## 🧠 State Management — Why Riverpod?
+State Management — Why Riverpod?
 
 **Riverpod** was chosen over Provider and BLoC for the following reasons:
 
@@ -116,7 +116,7 @@ Each feature is divided into three layers:
 
 ---
 
-## 🔐 Environment Variables
+Environment Variables
 
 The API key is stored in a `.env` file and never hardcoded in the source code.
 The `.env` file is added to `.gitignore` to prevent accidental exposure.
@@ -128,7 +128,7 @@ TMDB_IMAGE_BASE_URL=https://image.tmdb.org/t/p
 
 ---
 
-## 🎨 Screens
+Screens
 
 | Screen | Description |
 |---|---|
