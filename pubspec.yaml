@@ -1,0 +1,58 @@
+name: tmdb_movies
+description: A Flutter app for browsing popular movies using TMDb API.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State Management
+  flutter_riverpod: ^2.5.1
+  riverpod_annotation: ^2.3.5
+
+  # Network
+  dio: ^5.4.3
+
+  # Navigation
+  go_router: ^13.2.0
+
+  # Images
+  cached_network_image: ^3.3.1
+
+  # Local Storage
+  hive_flutter: ^1.1.0
+
+  # Environment Variables
+  flutter_dotenv: ^5.1.0
+
+  # Functional Error Handling
+  fpdart: ^1.1.0
+
+  # Code Generation (models)
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+  # UI
+  shimmer: ^3.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+  # Code Generators
+  build_runner: ^2.4.8
+  freezed: ^2.4.7
+  json_serializable: ^6.7.1
+  riverpod_generator: ^2.3.10
+  custom_lint: ^0.6.4
+  riverpod_lint: ^2.3.10
+
+flutter:
+  uses-material-design: true
+  assets:
+    - .env
